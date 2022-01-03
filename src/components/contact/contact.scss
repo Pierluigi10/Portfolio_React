@@ -15,15 +15,65 @@
 
     .c_left {
       flex: 1;
-      
-      .c_icon{
-        font-size: 80px;
-        // color: yellow;
+
+      .c_title {
+        font-size: 50px;
+      }
+
+      .c_info {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .c_icon {
+          width: 50px;
+          height: 60px;
+          // font-size: 80px;
+          // color: yellow;
+          margin-right: 15px;
+        }
       }
     }
 
     .c_right {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .c_description {
+        font-weight: 200;
+        margin-left: 15px;
+      }
+
+      form {
+        margin-top: 20px;
+        input {
+          width: 50%;
+          height: 50px;
+          border: none;
+          border-bottom: 1px solid black;
+          margin: 10px 0px;
+          font-size: 14px;
+          padding-left: 10px;
+        }
+        textarea {
+          width: 100%;
+          margin: 10px 0px;
+          font-size: 14px;
+          padding-left: 10px;
+        }
+
+        button {
+          border: none;
+          padding: 15px;
+          background-color: #59b256;
+          color: white;
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
