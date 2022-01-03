@@ -12,7 +12,7 @@
     .i_left_wrapper {
       padding: 50px;
       height: 50%;
-    //   background-color: red;
+      //   background-color: red;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -59,11 +59,30 @@
 
   .i_right {
     flex: 1;
+    position: relative;
+
+    .i_bg {
+      clip-path: polygon(
+        100% 0%,
+        100% 52%,
+        100% 100%,
+        25% 100%,
+        0% 50%,
+        25% 0%
+      );
+      background-color: #59b246;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
     .i_img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      position: absolute;
     }
   }
 }
