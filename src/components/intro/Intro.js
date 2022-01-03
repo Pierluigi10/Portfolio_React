@@ -2,7 +2,7 @@ import React from "react";
 import "./intro.scss";
 import Me from "../../images/me.png"
 
-function intro() {
+function Intro() {
   return (
     <div className="intro">
       <div className="i_left">
@@ -87,4 +87,4 @@ function intro() {
   );
 }
 
-export default intro;
+export default Intro;
