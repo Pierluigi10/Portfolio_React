@@ -12,7 +12,7 @@
     // background-color: red;
     height: 100%;
 
-    .bg {
+    .a_card.bg {
       position: absolute;
       top: 50px;
       left: 50px;
@@ -20,7 +20,7 @@
     }
 
     .a_card {
-      width: 60%;
+      width: 30vw;
       height: 70vh;
       border-radius: 30px;
       position: relative;
@@ -37,5 +37,19 @@
 
   .a_right {
     flex: 1;
+    // margin-left: 15px;
+
+    .a-title {
+      font-weight: bold;
+
+    }
+
+    .a-sub {
+      margin: 20px 0px;
+    }
+
+    .a-desc {
+      font-weight: 300;
+    }
   }
 }
