@@ -1,3 +1,13 @@
 .about {
   height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .a_left {
+    flex: 1;
+  }
+
+  .a_right {
+    flex: 1;
+  }
 }
