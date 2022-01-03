@@ -13,8 +13,12 @@ function intro() {
               <div className="i_title_item">Web Developer</div>
               <div className="i_title_item">Frontend</div>
               <div className="i_title_item">Backend</div>
-              
             </div>
+          </div>
+          <div className="i_description">
+            Full-Stack Webdeveloper and Quality Assurance Analyst. Graduated in
+            political science and currently participating in a one-year
+            full-time training including technologies of the MERN stack.
           </div>
         </div>
       </div>
