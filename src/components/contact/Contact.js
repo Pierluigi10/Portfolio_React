@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./contact.scss";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
@@ -6,20 +6,29 @@ import { BsGithub } from "react-icons/bs";
 // import emailjs from "@emailjs/browser";
 import emailjs from "emailjs-com";
 
-// require("dotenv").config();
-
 function Contact() {
   const formRef = useRef();
+  const [done, setDone] = useState(false);
 
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      emailjs.sendForm(
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         formRef.current,
         process.env.REACT_APP_USER_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setDone(true);
+        },
+        (error) => {
+          console.log(error.text);
+        }
       );
-    };
+  };
 
   return (
     <div className="contact">
@@ -68,6 +77,7 @@ function Contact() {
             <input type="text" placeholder="Email" name="user_email" />
             <textarea placeholder="Message" name="message" rows="5"></textarea>
             <button>Submit</button>
+            {done && "Thank you!"}
           </form>
         </div>
       </div>
