@@ -17,9 +17,7 @@ function Intro() {
             </div>
           </div>
           <p className="i_description">
-            Full-Stack Webdeveloper and Quality Assurance Analyst. Graduated in
-            political science and currently participating in a one-year
-            full-time training including technologies of the MERN stack.
+          Full Stack Web Developer (MERN) looking for new challenges! || HTML || CSS || SASS || JavaScript || React.js || NodeJS || MongoDB ||
           </p>
         </div>
         <svg

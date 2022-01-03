@@ -14,14 +14,11 @@ function About() {
       <div className="a_right">
         <h1 className="a-title">About Me</h1>
         <p className="a-sub">
-          It is a long established fact that a reader will be distracted by the
-          readable content.
+          Full-Stack Webdeveloper and Quality Assurance Analyst.
         </p>
-        <p className="a-desc">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat duis aute irure dolor in reprehende.
+        <p className="a-description">
+          Graduated in political science and currently participating in a
+          one-year full-time training including technologies of the MERN stack.
         </p>
       </div>
     </div>
