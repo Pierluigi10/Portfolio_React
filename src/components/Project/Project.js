@@ -1,7 +1,9 @@
 import React from "react";
 import "./project.scss";
 
-function Project() {
+
+function Project(props) {
+  const { img, link } = props;
   return (
     <div className="project">
       <div className="p_browser">
@@ -9,10 +11,14 @@ function Project() {
         <div className="p_circle"></div>
         <div className="p_circle"></div>
       </div>
-      <a href="https://pierluigi.netlify.app/" target="_blank" rel="noreferrer">
-        <img src="" alt="" className="p_img" />
+      
+      <a href={link} target="_blank" rel="noreferrer">
+        <img src={img} alt="" className="p_img" /> 
+            
       </a>
+      
     </div>
+
   );
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import "./projectList.scss";
 import Project from "../Project/Project.js";
+import { projects } from "../../data.js";
 
 function ProjectList() {
   return (
@@ -10,12 +11,9 @@ function ProjectList() {
         <p className="pl_description">just some projects</p>
       </div>
       <div className="pl_list">
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
+        {projects.map((item) => (
+          <Project key={item.id} img={item.img} link={item.link} />
+        ))}
       </div>
     </div>
   );
