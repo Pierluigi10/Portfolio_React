@@ -75,31 +75,37 @@
 export const projects = [
     {
       id: 1,
+      title:"TEST",
       img: " https://lh3.googleusercontent.com/proxy/UdsDG5x8x95tBZakViUWu92X0AEjDmwsIREbBZyHcsgL4UU4i3HwcwoBwsYmVYACzIzCkOIGbJO-YVcjW4yPC5dAY7DuJh4VF0HsgB2EsjBzt6xgKLecAIAQIVpQ7nnLK4M31s2OJvabvZQwY9YMUrVtBxIDiZgVFlyPm7xVRV4dDVcr",
       link: "https://pierluigi.netlify.app/",
     },
     {
       id: 2,
+      title:"TEST2",
       img: "https://pierluigi.netlify.app/images/firstporfolio.png",
       link: "https://github.com/Pierluigi10/matterjsproject",
     },
     {
       id: 3,
+      title:"TEST3",
       img: "https://pierluigi.netlify.app/images/firstporfolio.png",
       link: "https://whatistheweatherlike.netlify.app/",
     },
     {
       id: 4,
+      title:"TEST4",
       img: "https://pierluigi.netlify.app/images/firstporfolio.png",
       link: "https://mernshowcase-pb-frontend.vercel.app/",
     },
     {
       id: 5,
+      title:"TEST5",
       img: "https://pierluigi.netlify.app/images/firstporfolio.png",
       link: "https://littlegamejs.netlify.app/",
     },
     {
       id: 6,
+      title:"TEST6",
       img: "https://pierluigi.netlify.app/images/firstporfolio.png",
       link: "https://myfirstportfoliodci.netlify.app/",
     },
