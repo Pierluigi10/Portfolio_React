@@ -3,12 +3,14 @@ import "./contact.scss";
 import { FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const formRef = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
   };
 
   return (
