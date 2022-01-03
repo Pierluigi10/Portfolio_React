@@ -15,6 +15,7 @@ function ProjectList() {
         <Project />
         <Project />
         <Project />
+        <Project />
       </div>
     </div>
   );
