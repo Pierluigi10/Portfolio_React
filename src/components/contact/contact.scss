@@ -1,0 +1,24 @@
+.contact {
+  height: 100vh;
+  position: relative;
+
+  .c_bg {
+    width: 20px;
+    height: 100%;
+    background-color: #59b256;
+    position: absolute;
+  }
+
+  .c_wrapper {
+    padding: 50px;
+    display: flex;
+
+    .c_left {
+      flex: 1;
+    }
+
+    .c_right {
+      flex: 1;
+    }
+  }
+}
