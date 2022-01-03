@@ -12,7 +12,7 @@ function About() {
         </div>
       </div>
       <div className="a_right">
-        <h1 className="a-title">About Me</h1>
+        <h2 className="a-title">About Me</h2>
         <p className="a-sub">
           Full-Stack Webdeveloper and Quality Assurance Analyst.
         </p>
