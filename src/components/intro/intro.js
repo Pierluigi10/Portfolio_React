@@ -4,7 +4,20 @@ import "./intro.scss";
 function intro() {
   return (
     <div className="intro">
-      <div className="i_left">left</div>
+      <div className="i_left">
+        <div className="i_left_wrapper">
+          <h2 className="i_intro">Hello, my name is</h2>
+          <h1 className="i_name">Pierluigi</h1>
+          <div className="i_title">
+            <div className="i_title_wrapper">
+              <div className="i_title_item">Web Developer</div>
+              <div className="i_title_item">Frontend</div>
+              <div className="i_title_item">Backend</div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="i_right">right</div>
     </div>
   );

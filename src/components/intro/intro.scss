@@ -1,13 +1,50 @@
 .intro {
   display: flex;
   height: 100vh;
-  background-color: gray;
+  //   background-color: gray;
 
   .i_left {
     flex: 1;
+    .i_left_wrapper {
+      padding: 50px;
+      .i_intro {
+        font-size: 30px;
+        font-weight: 300px;
+      }
+      .i_name {
+        font-size: 60px;
+      }
+      .i_title {
+        height: 50px;
+        overflow: hidden;
+        .i_title_wrapper {
+          height: 100%;
+          animation: move 5s ease-in-out infinite alternate;
+          @keyframes move {
+            50% {
+              transform: translateY(-50px);
+            }
+            100% {
+              transform: translateY(-100px);
+            }
+          }
+
+          .i_title_item {
+            height: 50px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #59b246;
+            //   background-color: purple;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
   }
 
   .i_right {
     flex: 1;
   }
 }
+
