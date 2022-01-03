@@ -1,5 +1,6 @@
 import React from "react";
 import "./intro.scss";
+import Me from "../../images/me.png"
 
 function intro() {
   return (
@@ -22,7 +23,10 @@ function intro() {
           </div>
         </div>
       </div>
-      <div className="i_right">right</div>
+      <div className="i_right">
+          <div className="i_bg"></div>
+          <img src={Me} alt="" className="i_img" />
+      </div>
     </div>
   );
 }
