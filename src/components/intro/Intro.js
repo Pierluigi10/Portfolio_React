@@ -17,8 +17,7 @@ function Intro() {
             </div>
           </div>
           <p className="i_description">
-            Full Stack Web Developer (MERN) looking for new challenges! || HTML
-            || CSS || SASS || JavaScript || React.js || NodeJS || MongoDB ||
+            Full Stack Web Developer (MERN) looking for new challenges! 
           </p>
         </div>
         <svg
