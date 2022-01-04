@@ -22,7 +22,12 @@
   }
   .p_img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    // height: 100%;
+    // object-fit: cover;
+    transition: all 10s ease;
   }
+}
+
+.project:hover .p_img {
+  transform: translateY(-100%);
 }
