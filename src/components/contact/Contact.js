@@ -15,7 +15,6 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
@@ -32,10 +31,10 @@ function Contact() {
         (result) => {
           console.log(result.text);
           setDone(true);
-          setName(""); 
-          setSubject(""); 
-          setEmail(""); 
-          setMessage(""); 
+          setName("");
+          setSubject("");
+          setEmail("");
+          setMessage("");
         },
         (error) => {
           console.log(error.text);
@@ -92,6 +91,7 @@ function Contact() {
               name="user_name"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required={true}
             />
             <input
               style={{ backgroundColor: darkMode && "#333" }}
@@ -100,6 +100,7 @@ function Contact() {
               name="user_subject"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
+              required={true}
             />
             <input
               style={{ backgroundColor: darkMode && "#333" }}
@@ -108,6 +109,7 @@ function Contact() {
               name="user_email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required={true}
             />
             <textarea
               style={{ backgroundColor: darkMode && "#333" }}
@@ -116,6 +118,7 @@ function Contact() {
               rows="5"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              required={true}
             ></textarea>
             <button>Submit</button>
             {done && "Thank you!"}
