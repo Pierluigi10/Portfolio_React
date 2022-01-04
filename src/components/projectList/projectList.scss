@@ -4,25 +4,40 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative;
 
- 
-  .pl_texts {
-    width: 65%;
-
-    .pl_title {
-      font-size: 40px;
-      font-weight: 600;
-    }
-
-    .pl_description {
-      margin: 20px 0px;
-    }
+  .pl_bg {
+    clip-path: polygon(64% 0, 0 62%, 100% 100%);
+    background-color: #59b246;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // z-index: -999;
+    top: 0;
+    right: 0;
   }
 
-  .pl_list {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  .pl_card {
+    position: relative;
+
+    .pl_texts {
+      width: 65%;
+
+      .pl_title {
+        font-size: 40px;
+        font-weight: 600;
+      }
+
+      .pl_description {
+        margin: 20px 0px;
+      }
+    }
+
+    .pl_list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 }
