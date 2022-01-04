@@ -10,6 +10,12 @@ import { ThemeContext } from "../../context";
 function Contact() {
   const formRef = useRef();
   const [done, setDone] = useState(false);
+  const [name, setName] = useState("");
+  const [subject, setSubject] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
@@ -26,6 +32,10 @@ function Contact() {
         (result) => {
           console.log(result.text);
           setDone(true);
+          setName(""); 
+          setSubject(""); 
+          setEmail(""); 
+          setMessage(""); 
         },
         (error) => {
           console.log(error.text);
@@ -80,24 +90,32 @@ function Contact() {
               type="text"
               placeholder="Name"
               name="user_name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             <input
               style={{ backgroundColor: darkMode && "#333" }}
               type="text"
               placeholder="Subject"
               name="user_subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
             />
             <input
               style={{ backgroundColor: darkMode && "#333" }}
               type="text"
               placeholder="Email"
               name="user_email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <textarea
               style={{ backgroundColor: darkMode && "#333" }}
               placeholder="Message"
               name="message"
               rows="5"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
             <button>Submit</button>
             {done && "Thank you!"}
