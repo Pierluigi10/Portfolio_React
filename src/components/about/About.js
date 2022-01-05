@@ -17,7 +17,7 @@ function About() {
           Full-Stack Webdeveloper and Quality Assurance Analyst.
         </p>
         <p className="a_description">
-          Graduated in political science and currently participating in a
+          I have a degree in political science and then have completed a
           one-year full-time training including technologies of the MERN stack.
         </p>
         <p className="a_language">
