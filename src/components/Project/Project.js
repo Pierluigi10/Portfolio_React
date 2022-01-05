@@ -10,7 +10,7 @@ function Project(props) {
         <div className="p_circle"></div>
         <div className="p_circle"></div>
       </div>
-      <hp> {title}</hp>
+      <p> {title}</p>
       <a href={link} target="_blank" rel="noreferrer">
         <img src={img} alt="" className="p_img" />
       </a>

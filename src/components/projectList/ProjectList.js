@@ -1,7 +1,7 @@
 import React from "react";
 import "./projectList.scss";
 import Project from "../Project/Project.js";
-import { projects } from "../../data.js";
+import { projectsData } from "../../data.js";
 
 function ProjectList() {
   return (
@@ -13,7 +13,7 @@ function ProjectList() {
           <p className="pl_description">just some projects</p>
         </div>
         <div className="pl_list">
-          {projects.map((item) => (
+          {projectsData.map((item) => (
             <Project
               key={item.id}
               title={item.title}

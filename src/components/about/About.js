@@ -19,10 +19,9 @@ function About() {
         <p className="a_description">
           Graduated in political science and currently participating in a
           one-year full-time training including technologies of the MERN stack.
-          <p className="a_language">
-            {" "}
-            HTML5 || CSS || SASS || JavaScript || React.js || NodeJS || MongoDB
-          </p>
+        </p>
+        <p className="a_language">
+          HTML5 || CSS || SASS || JavaScript || React.js || NodeJS || MongoDB
         </p>
       </div>
     </div>
