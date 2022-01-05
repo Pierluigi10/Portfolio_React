@@ -80,8 +80,8 @@ function Contact() {
         </div>
         <div className="c_right">
           <p className="c-description">
-            What's your story? Get in touch. Always available for for new
-            challenges if the right project comes along me.
+            <strong> What's your story? </strong>Get in touch. Always available
+            for for new challenges if the right project comes along me.
           </p>
           <form ref={formRef} onSubmit={handleSubmit}>
             <input
