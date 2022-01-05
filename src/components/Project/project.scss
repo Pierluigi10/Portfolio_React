@@ -1,6 +1,6 @@
 .project {
-  width: 30%;
-  height: 40vh;
+  width: 40%;
+  height: 30vh;
   margin: 20px 10px;
   border: 2px solid #f3f2f2;
   border-radius: 10px 10px 0px 0px;
@@ -32,4 +32,11 @@
 
 .project:hover .p_img {
   transform: translateY(-100%);
+}
+
+@media only screen and (min-width: 700px) {
+  .project {
+    width: 30%;
+    height: 40vh;
+  }
 }
