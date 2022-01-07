@@ -1,6 +1,6 @@
 import React from "react";
 import "./intro.scss";
-import Me from "../../images/me.png";
+import Me from "../../images/me-min.png";
 
 function Intro() {
   return (
