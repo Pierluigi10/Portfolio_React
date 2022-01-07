@@ -6,6 +6,8 @@ import { BsGithub } from "react-icons/bs";
 // import emailjs from "@emailjs/browser";
 import emailjs from "emailjs-com";
 import { ThemeContext } from "../../context";
+import { init } from "@emailjs/browser";
+init(process.env.REACT_APP_USER_ID);
 
 function Contact() {
   const formRef = useRef();
