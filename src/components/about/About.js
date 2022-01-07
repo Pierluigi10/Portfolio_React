@@ -6,7 +6,6 @@ function About() {
   return (
     <div className="about">
       <div className="a_left">
-        {/* <div className="a_card bg"></div> */}
         <div className="a_card">
           <img src={codeGlasses} alt="codeGlasses" className="a_img" />
         </div>

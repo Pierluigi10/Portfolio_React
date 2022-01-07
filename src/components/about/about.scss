@@ -39,11 +39,12 @@
 
     .a_sub {
       margin: 15px 0px;
+      font-size: 18px;
     }
 
     .a_description {
       font-weight: 300;
-      margin: 10px 10px;
+      margin: 10px 10px;      
     }
 
     .a_language {
@@ -75,8 +76,17 @@
         font-size: 40px;
       }
 
+      .a_sub {
+        font-size: 25px;
+      }
+
+      .a_description {
+        font-size: 20px;
+      }
+
       .a_language {
         margin: 20px 0px;
+        font-size: 25px;
       }
     }
   }
