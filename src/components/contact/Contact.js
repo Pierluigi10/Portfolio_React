@@ -4,9 +4,11 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { BsGithub } from "react-icons/bs";
 // import emailjs from "@emailjs/browser";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 import { ThemeContext } from "../../context";
-import { init } from "@emailjs/browser";
+// import { init } from "@emailjs/browser";
+import emailjs, { init } from "@emailjs/browser";
+
 init(process.env.REACT_APP_USER_ID);
 
 function Contact() {
