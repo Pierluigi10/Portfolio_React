@@ -1,3 +1,4 @@
+import React from "react";
 import { useContext } from "react";
 import About from "./components/about/About.js";
 import Contact from "./components/contact/Contact.js";
