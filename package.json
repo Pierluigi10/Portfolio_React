@@ -1,55 +1,35 @@
 {
-  "name": "new",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-porfolio",
+  "version": "1.0.0",
+  "description": "This my portifolio made with Reactjs, JavaScript, SAAS and Emailjs.",
+  "main": "index.js",
   "dependencies": {
-    "@babel/core": "^7.17.4",
     "@emailjs/browser": "^3.4.0",
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "ansi-html": "0.0.7",
+    "ansi-html": "^0.0.7",
     "ansi-regex": "^6.0.1",
+    "bindings": "^1.5.0",
     "dotenv": "^8.6.0",
-    "emailjs-com": "^3.2.0",
+    "file-uri-to-path": "^1.0.0",
     "glob-parent": "^6.0.2",
     "immer": "^9.0.12",
+    "nan": "^2.15.0",
     "postcss": "^8.4.6",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-scripts": "4.0.3",
     "sass": "^1.49.7",
-    "testing-library": "0.0.2",
-    "typescript": "^4.5.5",
-    "web-vitals": "^1.0.1"
+    "testing-library": "^0.0.2",
+    "typescript": "^4.5.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "preinstall": "npx npm-force-resolutions"
+    "start": "react-scripts start"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pierluigi10/Portfolio_React.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pierluigi10/Portfolio_React/issues"
   },
-  "devDependencies": {
-    "@testing-library/dom": "^8.11.3"
-  }
+  "homepage": "https://github.com/Pierluigi10/Portfolio_React#readme"
 }
