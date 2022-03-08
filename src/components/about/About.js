@@ -13,14 +13,15 @@ function About() {
       <div className="a_right">
         <h2 className="a_title">About Me</h2>
         <p className="a_sub">
-          Full-Stack Webdeveloper and Quality Assurance Analyst.
+          Full Stack Web Developer and Quality Assurance Analyst.
         </p>
         <p className="a_description">
-          I have a degree in political science and then have completed a
-          one-year full-time training including technologies of the MERN stack.
+          I have completed a one-year full-time training, including MERN stack
+          technologies. In my drawer I keep a degree in Political Science.
         </p>
         <p className="a_language">
-          HTML5 || CSS || SASS || JavaScript || React.js || NodeJS || MongoDB
+          HTML5 || CSS || SASS || JavaScript || React.js || NodeJS || Express ||
+          MongoDB || Mongoose
         </p>
       </div>
     </div>
