@@ -1,11 +1,11 @@
 {
-  "name": "react-porfolio",
+  "name": "react-portfolio",
   "version": "1.0.0",
-  "description": "This my portifolio made with Reactjs, JavaScript, SAAS and Emailjs.",
+  "description": "This my portfolio made with Reactjs, JavaScript, SAAS and Emailjs.",
   "main": "index.js",
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
-    "ansi-html": "^0.0.7",
+    "ansi-html": "^0.0.9",
     "ansi-regex": "^6.0.1",
     "bindings": "^1.5.0",
     "dotenv": "^8.6.0",
@@ -19,7 +19,7 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "^2.1.3",
     "sass": "^1.49.7",
     "testing-library": "^0.0.2",
     "typescript": "^4.5.5"
