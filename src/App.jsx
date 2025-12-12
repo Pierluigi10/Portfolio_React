@@ -1,7 +1,6 @@
 import React from "react";
 import { useContext } from "react";
 import About from "./components/about/About.jsx";
-import Contact from "./components/contact/Contact.jsx";
 import Intro from "./components/intro/Intro.jsx";
 import ProjectList from "./components/projectList/ProjectList.jsx";
 import Toggle from "./components/toggle/Toggle.jsx";
@@ -21,7 +20,6 @@ function App() {
       <Intro />
       <About />
       <ProjectList />
-      <Contact />
     </div>
   );
 }

@@ -1,23 +1,26 @@
 import React from "react";
 import "./intro.scss";
-import Me from "../../images/me-min.png";
+import MeWebP from "../../images/me-min.webp";
+import MePNG from "../../images/me-min.png";
 
 function Intro() {
   return (
     <div className="intro">
       <div className="i_left">
         <div className="i_left_wrapper">
-          <h2 className="i_intro">Hello, my name is</h2>
+          <h2 className="i_intro">Hello! I'm</h2>
           <h1 className="i_name">Pierluigi</h1>
           <div className="i_title">
             <div className="i_title_wrapper">
-              <div className="i_title_item">Web Developer</div>
-              <div className="i_title_item">Frontend</div>
-              <div className="i_title_item">Backend</div>
+              <div className="i_title_item">Full Stack Developer</div>
+              <div className="i_title_item">React Enthusiast</div>
+              <div className="i_title_item">Problem Solver</div>
             </div>
           </div>
           <p className="i_description">
-            Full Stack Web Developer (MERN) looking for new challenges! 
+            I love creating web experiences that are both beautiful and performant.
+            React, Next.js, and Astro on the frontend. Node.js and NestJS on the backend.
+            User experience is my passion.
           </p>
         </div>
         <svg
@@ -79,7 +82,15 @@ function Intro() {
       </div>
       <div className="i_right">
         <div className="i_bg"></div>
-        <img src={Me} alt="" className="i_img" />
+        <picture>
+          <source srcSet={MeWebP} type="image/webp" />
+          <img
+            src={MePNG}
+            alt="Pierluigi - Full Stack Web Developer"
+            className="i_img"
+            loading="lazy"
+          />
+        </picture>
       </div>
     </div>
   );

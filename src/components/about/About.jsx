@@ -16,12 +16,12 @@ function About() {
           Full Stack Web Developer and Quality Assurance Analyst.
         </p>
         <p className="a_description">
-          I have completed a one-year full-time training, including MERN stack
-          technologies. In my drawer I keep a degree in Political Science.
+          I have completed a one-year full-time training in modern web development.
+          In my drawer I keep a degree in Political Science.
         </p>
         <p className="a_language">
-          HTML5 || CSS || SASS || JavaScript || React.js || NodeJS || Express ||
-          MongoDB || Mongoose
+          HTML5 || CSS || SASS || JavaScript || TypeScript || React.js || Next.js ||
+          Astro || Node.js || NestJS || Express
         </p>
       </div>
     </div>
