@@ -14,7 +14,9 @@
     "skills": "HTML5 || CSS || SASS || JavaScript || TypeScript || React.js || Next.js || Astro || Node.js || NestJS || Express"
   },
   "projects": {
-    "title": "Projekte"
+    "title": "Projekte",
+    "loading": "Projekte werden geladen...",
+    "error": "Projekte können nicht geladen werden. Zeige zwischengespeicherte Projekte."
   },
   "theme": {
     "lightMode": "Zum hellen Modus wechseln",
