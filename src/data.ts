@@ -6,7 +6,14 @@ import mern from "./images/mern.png";
 import secondPortfolio from "./images/secondportfolio.png";
 import commonDestination from "./images/commondestination.png";
 
-export const projectsData = [
+export interface Project {
+  id: number;
+  title: string;
+  img: string;
+  link: string;
+}
+
+export const projectsData: Project[] = [
   {
     id: 7,
     title: "Final Project: Common Destination",

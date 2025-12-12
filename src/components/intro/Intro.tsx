@@ -18,9 +18,9 @@ function Intro() {
             </div>
           </div>
           <p className="i_description">
-            I love creating web experiences that are both beautiful and performant.
-            React, Next.js, and Astro on the frontend. Node.js and NestJS on the backend.
-            User experience is my passion.
+            I love creating web experiences that are both beautiful and
+            performant. React, Next.js, and Astro on the frontend. Node.js and
+            NestJS on the backend. User experience is my passion.
           </p>
         </div>
         <svg
@@ -31,6 +31,7 @@ function Intro() {
           stroke="black"
           className="i_scroll"
           xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
         >
           <g id="scroll">
             <path

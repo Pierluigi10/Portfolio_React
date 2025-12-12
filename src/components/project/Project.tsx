@@ -1,8 +1,13 @@
 import React from "react";
 import "./project.scss";
 
-function Project(props) {
-  const { title, img, link } = props;
+interface ProjectProps {
+  title: string;
+  img: string;
+  link: string;
+}
+
+const Project: React.FC<ProjectProps> = ({ title, img, link }) => {
   return (
     <div className="project">
       <div className="p_browser">
@@ -10,12 +15,12 @@ function Project(props) {
         <div className="p_circle"></div>
         <div className="p_circle"></div>
       </div>
-      <p> {title}</p>
+      <p>{title}</p>
       <a href={link} target="_blank" rel="noreferrer">
-        <img src={img} alt="" className="p_img" />
+        <img src={img} alt={`${title} project screenshot`} className="p_img" />
       </a>
     </div>
   );
-}
+};
 
 export default Project;

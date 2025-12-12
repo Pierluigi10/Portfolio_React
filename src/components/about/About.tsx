@@ -7,7 +7,11 @@ function About() {
     <div className="about">
       <div className="a_left">
         <div className="a_card">
-          <img src={codeGlasses} alt="codeGlasses" className="a_img" />
+          <img
+            src={codeGlasses}
+            alt="Code visualization with glasses"
+            className="a_img"
+          />
         </div>
       </div>
       <div className="a_right">
@@ -16,12 +20,12 @@ function About() {
           Full Stack Web Developer and Quality Assurance Analyst.
         </p>
         <p className="a_description">
-          I have completed a one-year full-time training in modern web development.
-          In my drawer I keep a degree in Political Science.
+          I have completed a one-year full-time training in modern web
+          development. In my drawer I keep a degree in Political Science.
         </p>
         <p className="a_language">
-          HTML5 || CSS || SASS || JavaScript || TypeScript || React.js || Next.js ||
-          Astro || Node.js || NestJS || Express
+          HTML5 || CSS || SASS || JavaScript || TypeScript || React.js ||
+          Next.js || Astro || Node.js || NestJS || Express
         </p>
       </div>
     </div>
