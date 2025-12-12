@@ -1,11 +1,11 @@
 import React from "react";
 import { useContext } from "react";
-import About from "./components/about/About.js";
-import Contact from "./components/contact/Contact.js";
-import Intro from "./components/intro/Intro.js";
-import ProjectList from "./components/projectList/ProjectList.js";
-import Toggle from "./components/toggle/Toggle.js";
-import { ThemeContext } from "./context.js";
+import About from "./components/about/About.jsx";
+import Contact from "./components/contact/Contact.jsx";
+import Intro from "./components/intro/Intro.jsx";
+import ProjectList from "./components/projectList/ProjectList.jsx";
+import Toggle from "./components/toggle/Toggle.jsx";
+import { ThemeContext } from "./context.jsx";
 
 function App() {
   const theme = useContext(ThemeContext);
