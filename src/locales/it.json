@@ -1,0 +1,23 @@
+{
+  "intro": {
+    "greeting": "Ciao! Sono",
+    "name": "Pierluigi",
+    "title1": "Full Stack Developer",
+    "title2": "Appassionato di React",
+    "title3": "Problem Solver",
+    "description": "Amo creare esperienze web che siano sia belle che performanti. React, Next.js e Astro nel frontend. Node.js e NestJS nel backend. L'esperienza utente è la mia passione."
+  },
+  "about": {
+    "title": "Su di Me",
+    "subtitle": "Full Stack Web Developer e Quality Assurance Analyst.",
+    "description": "Ho completato una formazione a tempo pieno di un anno nello sviluppo web moderno. Nel mio cassetto custodisco una laurea in Scienze Politiche.",
+    "skills": "HTML5 || CSS || SASS || JavaScript || TypeScript || React.js || Next.js || Astro || Node.js || NestJS || Express"
+  },
+  "projects": {
+    "title": "Progetti"
+  },
+  "theme": {
+    "lightMode": "Passa alla modalità chiara",
+    "darkMode": "Passa alla modalità scura"
+  }
+}

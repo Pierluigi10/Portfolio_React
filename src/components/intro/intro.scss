@@ -27,40 +27,44 @@
       }
 
       .i_title {
-        height: 50px;
+        height: 40px;
         overflow: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .i_title_wrapper {
-          // height: 100%;
           animation: move 5s ease-in-out infinite alternate;
 
           @keyframes move {
             50% {
-              transform: translateY(-50px);
+              transform: translateY(-40px);
             }
             100% {
-              transform: translateY(-100px);
+              transform: translateY(-80px);
             }
           }
 
           .i_title_item {
-            height: 50px;
-            font-size: 25px;
+            height: 40px;
+            font-size: 18px;
             font-weight: bold;
             color: #59b246;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
           }
         }
       }
       
       .i_description {
-        font-size: 15px;
-        font-weight: bold;
-        // visibility: hidden;
+        font-size: 13px;
+        font-weight: normal;
+        margin-top: 15px;
+        line-height: 1.4;
       }
-    }
-
-    .i_scroll {
-      visibility: hidden;
     }
   }
 
@@ -117,27 +121,30 @@
         }
 
         .i_title {
+          height: 50px;
+
           .i_title_wrapper {
+            @keyframes move {
+              50% {
+                transform: translateY(-50px);
+              }
+              100% {
+                transform: translateY(-100px);
+              }
+            }
+
             .i_title_item {
+              height: 50px;
               font-size: 35px;
-              overflow: hidden;
             }
           }
         }
         .i_description {
-          font-weight: bold;
-          font-size: 25px;
-
-          // visibility: visible;
+          font-weight: normal;
+          font-size: 20px;
+          margin-top: 20px;
+          line-height: 1.5;
         }
-      }
-
-      .i_scroll {
-        visibility: visible;
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        bottom: 20px;
       }
     }
   }

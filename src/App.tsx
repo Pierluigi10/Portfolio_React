@@ -3,6 +3,7 @@ import About from "./components/about/About";
 import Intro from "./components/intro/Intro";
 import ProjectList from "./components/projectList/ProjectList";
 import Toggle from "./components/toggle/Toggle";
+import LanguageSwitcher from "./components/languageSwitcher/LanguageSwitcher";
 import { ThemeContext } from "./context";
 
 function App() {
@@ -20,8 +21,10 @@ function App() {
         backgroundColor: darkMode ? "#222" : "white",
         color: darkMode ? "white" : "#000",
       }}
+      role="main"
     >
       <Toggle />
+      <LanguageSwitcher />
       <Intro />
       <About />
       <ProjectList />

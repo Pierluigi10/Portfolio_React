@@ -1,15 +1,18 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import "./projectList.scss";
 import Project from "../project/Project";
 import { projectsData } from "../../data";
 
 function ProjectList() {
+  const { t } = useTranslation();
+
   return (
-    <div className="projectList">
+    <section className="projectList" aria-labelledby="projects-title">
       <div className="pl_bg"></div>
       <div className="pl_card">
         <div className="pl_texts">
-          <h2 className="pl_title">Projects</h2>
+          <h2 id="projects-title" className="pl_title">{t("projects.title")}</h2>
         </div>
         <div className="pl_list">
           {projectsData.map((item) => (
@@ -22,7 +25,7 @@ function ProjectList() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
