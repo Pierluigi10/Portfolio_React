@@ -9,7 +9,7 @@ import { ThemeContext } from "../../context";
 // import { init } from "@emailjs/browser";
 import emailjs, { init } from "@emailjs/browser";
 
-init(process.env.REACT_APP_USER_ID);
+init(import.meta.env.VITE_USER_ID);
 
 function Contact() {
   const formRef = useRef();
@@ -26,10 +26,10 @@ function Contact() {
     e.preventDefault();
     emailjs
       .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         formRef.current,
-        process.env.REACT_APP_USER_ID
+        import.meta.env.VITE_USER_ID
       )
       .then(
         (result) => {
