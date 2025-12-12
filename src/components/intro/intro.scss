@@ -50,7 +50,7 @@
             height: 40px;
             font-size: 18px;
             font-weight: bold;
-            color: #59b246;
+            color: #2d7a1f;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -58,12 +58,26 @@
           }
         }
       }
-      
+
       .i_description {
         font-size: 13px;
         font-weight: normal;
         margin-top: 15px;
         line-height: 1.4;
+      }
+    }
+  }
+
+  &.dark-mode {
+    .i_left {
+      .i_left_wrapper {
+        .i_title {
+          .i_title_wrapper {
+            .i_title_item {
+              color: #7dd862;
+            }
+          }
+        }
       }
     }
   }

@@ -5,7 +5,7 @@
   z-index: 998;
   display: flex;
   gap: 5px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   padding: 5px;
   border-radius: 20px;
@@ -15,7 +15,7 @@
     padding: 8px 12px;
     border: none;
     background-color: transparent;
-    color: #666;
+    color: #222;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -24,8 +24,8 @@
     font-family: "Poppins", sans-serif;
 
     &:hover {
-      background-color: rgba(89, 178, 70, 0.1);
-      color: #59b246;
+      background-color: rgba(89, 178, 70, 0.15);
+      color: #1a6b10;
     }
 
     &.active {
@@ -36,6 +36,24 @@
     &:focus {
       outline: 2px solid #59b246;
       outline-offset: 2px;
+    }
+  }
+
+  &.dark-mode {
+    background-color: rgba(50, 50, 50, 0.95);
+
+    .lang-button {
+      color: #f0f0f0;
+
+      &:hover {
+        background-color: rgba(89, 178, 70, 0.2);
+        color: #7dd862;
+      }
+
+      &.active {
+        background-color: #59b246;
+        color: white;
+      }
     }
   }
 }

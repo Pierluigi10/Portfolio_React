@@ -1,14 +1,23 @@
-import React from "react";
+import { useContext } from "react";
 import { useTranslation } from "react-i18next";
+import { ThemeContext } from "../../context";
 import "./intro.scss";
 import MeWebP from "../../images/me-min.webp";
 import MePNG from "../../images/me-min.png";
 
 function Intro() {
   const { t } = useTranslation();
+  const theme = useContext(ThemeContext);
+
+  if (!theme) {
+    throw new Error("Intro must be used within ThemeProvider");
+  }
 
   return (
-    <section className="intro" aria-label="Introduction">
+    <section
+      className={`intro ${theme.state.darkMode ? "dark-mode" : ""}`}
+      aria-label="Introduction"
+    >
       <div className="i_left">
         <div className="i_left_wrapper">
           <h2 className="i_intro">{t("intro.greeting")}</h2>

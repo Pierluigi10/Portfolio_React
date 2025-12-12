@@ -1,5 +1,6 @@
-import React from "react";
+import { useContext } from "react";
 import { useTranslation } from "react-i18next";
+import { ThemeContext } from "../../context";
 import "./languageSwitcher.scss";
 
 const languages = [
@@ -10,13 +11,22 @@ const languages = [
 
 function LanguageSwitcher() {
   const { i18n } = useTranslation();
+  const theme = useContext(ThemeContext);
+
+  if (!theme) {
+    throw new Error("LanguageSwitcher must be used within ThemeProvider");
+  }
 
   const changeLanguage = (langCode: string) => {
     i18n.changeLanguage(langCode);
   };
 
   return (
-    <div className="language-switcher">
+    <div
+      className={`language-switcher ${
+        theme.state.darkMode ? "dark-mode" : ""
+      }`}
+    >
       {languages.map((lang) => (
         <button
           key={lang.code}
