@@ -1,0 +1,9 @@
+.top-bar {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
