@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, ReactNode, Dispatch } from "react";
+import React, { createContext, useReducer, ReactNode, Dispatch, useContext } from "react";
 
 interface ThemeState {
   darkMode: boolean;
@@ -41,3 +41,17 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
+
+/**
+ * Custom hook to access theme context
+ * Throws an error if used outside ThemeProvider
+ */
+export function useTheme(): ThemeContextType {
+  const context = useContext(ThemeContext);
+  
+  if (!context) {
+    throw new Error("useTheme must be used within ThemeProvider");
+  }
+  
+  return context;
+}

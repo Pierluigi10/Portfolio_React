@@ -1,5 +1,4 @@
-import { useContext } from "react";
-import { ThemeContext } from "../../context";
+import { useTheme } from "../../context";
 import "./project.scss";
 
 interface ProjectProps {
@@ -21,12 +20,12 @@ const Project: React.FC<ProjectProps> = ({
   description,
   languages,
 }) => {
-  const theme = useContext(ThemeContext);
+  const { state } = useTheme();
   // Check if live site exists (different from repo link)
   const hasLiveSite = link !== repoLink;
 
   return (
-    <div className={`project ${theme?.state.darkMode ? "dark-mode" : ""}`}>
+    <div className={`project ${state.darkMode ? "dark-mode" : ""}`}>
       <div className="p_browser">
         <div className="p_circle"></div>
         <div className="p_circle"></div>

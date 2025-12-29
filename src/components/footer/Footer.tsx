@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { ThemeContext } from "../../context";
+import { useTheme } from "../../context";
 import "./footer.scss";
 
 function Footer() {
-  const theme = useContext(ThemeContext);
+  const { state } = useTheme();
 
   const socialLinks = [
     {
@@ -59,7 +58,7 @@ function Footer() {
   ];
 
   return (
-    <footer className={`footer ${theme?.state.darkMode ? "dark-mode" : ""}`}>
+    <footer className={`footer ${state.darkMode ? "dark-mode" : ""}`}>
       <div className="footer_content">
         <div className="footer_social">
           {socialLinks.map((link) => (

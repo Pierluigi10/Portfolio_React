@@ -1,20 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import "./toggle.scss";
 import sun from "../../images/sun.png";
 import moon from "../../images/moon.png";
-import { ThemeContext } from "../../context";
+import { useTheme } from "../../context";
 
 function Toggle() {
   const { t } = useTranslation();
-  const theme = useContext(ThemeContext);
-
-  if (!theme) {
-    throw new Error("Toggle must be used within ThemeProvider");
-  }
+  const { state, dispatch } = useTheme();
 
   const handleClick = () => {
-    theme.dispatch({ type: "TOGGLE" });
+    dispatch({ type: "TOGGLE" });
   };
 
   return (
@@ -24,7 +20,7 @@ function Toggle() {
       <div
         className="t_button"
         onClick={handleClick}
-        style={{ left: theme.state.darkMode ? 0 : 25 }}
+        style={{ left: state.darkMode ? 0 : 25 }}
         role="button"
         tabIndex={0}
         onKeyDown={(e) => {
@@ -33,7 +29,7 @@ function Toggle() {
             handleClick();
           }
         }}
-        aria-label={t(theme.state.darkMode ? "theme.lightMode" : "theme.darkMode")}
+        aria-label={t(state.darkMode ? "theme.lightMode" : "theme.darkMode")}
       />
     </div>
   );
