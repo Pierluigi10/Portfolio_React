@@ -1,0 +1,78 @@
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #4a8a3a; // Better contrast ratio
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(74, 138, 58, 0.4);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  min-width: 44px; // WCAG minimum touch target
+  min-height: 44px;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &:hover {
+    background-color: #3d7531;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(74, 138, 58, 0.5);
+  }
+
+  &:active {
+    transform: translateY(-2px);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 3px solid #005fcc;
+    outline-offset: 3px;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &.dark-mode {
+    background-color: #4a9a3a; // Better contrast in dark mode
+    box-shadow: 0 4px 12px rgba(74, 154, 58, 0.4);
+
+    &:hover {
+      background-color: #3d7531;
+      box-shadow: 0 6px 20px rgba(74, 154, 58, 0.5);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+

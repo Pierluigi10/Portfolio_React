@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import "./about.scss";
 import codeGlasses from "../../images/codeglasses.png";
@@ -7,7 +6,7 @@ function About() {
   const { t } = useTranslation();
 
   return (
-    <section className="about" aria-labelledby="about-title">
+    <section id="about" className="about" aria-labelledby="about-title">
       <div className="a_left">
         <div className="a_card">
           <img

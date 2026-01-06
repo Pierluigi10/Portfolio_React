@@ -1,0 +1,31 @@
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-color: #4a8a3a; // Better contrast ratio
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 9999;
+  border-radius: 0 0 4px 0;
+  transition: top 0.3s ease;
+  min-height: 44px; // WCAG minimum touch target
+
+  &:focus {
+    top: 0;
+    outline: 3px solid #005fcc;
+    outline-offset: -3px;
+  }
+
+  &:focus-visible {
+    top: 0;
+    outline: 3px solid #005fcc;
+    outline-offset: -3px;
+  }
+
+  &:hover {
+    background-color: #3d7531;
+  }
+}
+

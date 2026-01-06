@@ -5,7 +5,9 @@
     "title1": "Full Stack Developer",
     "title2": "React Enthusiast",
     "title3": "Problem Solver",
-    "description": "I love creating web experiences that are both beautiful and performant. React, Next.js, and Astro on the frontend. Node.js and NestJS on the backend. User experience is my passion."
+    "description": "I love creating web experiences that are both beautiful and performant. React, Next.js, and Astro on the frontend. Node.js and NestJS on the backend. User experience is my passion.",
+    "viewProjects": "View Projects",
+    "getInTouch": "Get in Touch"
   },
   "about": {
     "title": "About Me",
@@ -13,10 +15,37 @@
     "description": "I have completed a one-year full-time training in modern web development. In my drawer I keep a degree in Political Science.",
     "skills": "HTML5 || CSS || SASS || JavaScript || TypeScript || React.js || Next.js || Astro || Node.js || NestJS || Express"
   },
+  "skills": {
+    "title": "Skills & Technologies",
+    "subtitle": "Technologies and tools I work with to bring ideas to life",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools"
+  },
   "projects": {
     "title": "Projects",
     "loading": "Loading projects...",
     "error": "Unable to load projects. Showing cached projects."
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Feel free to reach out if you want to collaborate or just say hello!",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "sendEmail": "Send Email",
+    "visit": "Visit",
+    "copy": "Copy",
+    "copyEmail": "Copy email to clipboard",
+    "copied": "Copied!"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "menuToggle": "Toggle navigation menu"
   },
   "theme": {
     "lightMode": "Switch to light mode",

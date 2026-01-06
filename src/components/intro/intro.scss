@@ -1,8 +1,10 @@
 .intro {
   display: flex;
+  min-height: 100vh;
   height: 100vh;
   flex-direction: column;
-  // border-top: 12px solid blue;
+  position: relative;
+  padding-top: 80px;
 
   .i_left {
     flex: 1;
@@ -19,11 +21,17 @@
 
       .i_intro {
         font-size: 20px;
-        font-weight: 300px;
+        font-weight: 300;
       }
 
       .i_name {
         font-size: 40px;
+        background: linear-gradient(135deg, #59b246 0%, #4a9a3a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 700;
+        margin: 10px 0;
       }
 
       .i_title {
@@ -65,16 +73,126 @@
         margin-top: 15px;
         line-height: 1.4;
       }
+
+      .i_cta {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 30px;
+        flex-wrap: wrap;
+
+        .i_cta_btn {
+          padding: 12px 30px;
+          font-size: 16px;
+          font-weight: 600;
+          border: none;
+          border-radius: 30px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-decoration: none;
+          display: inline-block;
+          position: relative;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+          }
+
+          &:active::before {
+            width: 300px;
+            height: 300px;
+          }
+
+          &.i_cta_primary {
+            background-color: #4a8a3a; // Better contrast ratio ~4.7:1
+            color: white;
+            min-height: 44px; // WCAG minimum touch target
+
+            &:hover {
+              background-color: #3d7531;
+              transform: translateY(-2px);
+              box-shadow: 0 5px 15px rgba(74, 138, 58, 0.4);
+            }
+
+            &:focus,
+            &:focus-visible {
+              outline: 3px solid #005fcc;
+              outline-offset: 3px;
+              background-color: #4a8a3a;
+            }
+          }
+
+          &.i_cta_secondary {
+            background-color: transparent;
+            color: #4a8a3a; // Better contrast
+            border: 2px solid #4a8a3a;
+            min-height: 44px; // WCAG minimum touch target
+
+            &:hover {
+              background-color: #4a8a3a;
+              color: white;
+              transform: translateY(-2px);
+              box-shadow: 0 5px 15px rgba(74, 138, 58, 0.3);
+            }
+
+            &:focus,
+            &:focus-visible {
+              outline: 3px solid #005fcc;
+              outline-offset: 3px;
+              border-color: #4a8a3a;
+            }
+          }
+        }
+      }
     }
   }
 
   &.dark-mode {
     .i_left {
       .i_left_wrapper {
+        .i_name {
+          background: linear-gradient(135deg, #7dd862 0%, #59b246 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+        }
+
         .i_title {
           .i_title_wrapper {
             .i_title_item {
               color: #7dd862;
+            }
+          }
+        }
+
+        .i_cta {
+          .i_cta_secondary {
+            color: #5fb852; // Better contrast
+            border-color: #5fb852;
+
+            &:hover {
+              background-color: #4a9a3a;
+              color: white;
+            }
+
+            &:focus-visible {
+              outline-color: #4a9eff;
+              border-color: #5fb852;
+            }
+          }
+
+          .i_cta_primary {
+            &:focus-visible {
+              outline-color: #4a9eff;
             }
           }
         }
@@ -101,6 +219,7 @@
       position: absolute;
       top: 0;
       right: 0;
+      transition: transform 0.1s ease-out;
     }
 
     .i_img {
@@ -108,7 +227,115 @@
       height: 100%;
       object-fit: cover;
       position: absolute;
+      transition: transform 0.1s ease-out;
     }
+  }
+
+  .i_scroll_indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: bounce 2s infinite;
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+
+    .i_scroll_mouse {
+      width: 24px;
+      height: 40px;
+      border: 2px solid currentColor;
+      border-radius: 12px;
+      position: relative;
+
+      .i_scroll_wheel {
+        width: 4px;
+        height: 8px;
+        background-color: currentColor;
+        border-radius: 2px;
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: scroll-wheel 2s infinite;
+      }
+
+      @keyframes scroll-wheel {
+        0% {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(-50%) translateY(12px);
+        }
+      }
+    }
+  }
+
+  // Animations
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  .animate-slide-in {
+    animation: slideInUp 0.8s ease-out;
+  }
+
+  .animate-fade-in-delay {
+    animation: fadeIn 0.8s ease-out 0.3s both;
+  }
+
+  .animate-fade-in-delay-2 {
+    animation: fadeIn 0.8s ease-out 0.6s both;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 1s ease-out 0.4s both;
   }
 }
 
@@ -120,14 +347,13 @@
       .i_left_wrapper {
         padding: 50px;
         height: 50%;
-        //   background-color: red;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
         .i_intro {
           font-size: 30px;
-          font-weight: 300px;
+          font-weight: 300;
         }
 
         .i_name {
@@ -159,7 +385,39 @@
           margin-top: 20px;
           line-height: 1.5;
         }
+
+        .i_cta {
+          margin-top: 40px;
+
+          .i_cta_btn {
+            padding: 14px 35px;
+            font-size: 18px;
+          }
+        }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .intro {
+    .i_left {
+      .i_left_wrapper {
+        margin-left: 0;
+
+        .i_cta {
+          flex-direction: column;
+          align-items: stretch;
+
+          .i_cta_btn {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .i_scroll_indicator {
+      bottom: 20px;
     }
   }
 }

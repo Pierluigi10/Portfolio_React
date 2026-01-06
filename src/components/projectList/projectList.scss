@@ -1,10 +1,11 @@
 .projectList {
-  padding: 10px;
+  padding: 60px 15px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   position: relative;
+  min-height: auto;
 
   .pl_bg {
     clip-path: polygon(64% 0, 0 62%, 100% 100%);
@@ -38,32 +39,7 @@
     }
 
     .pl_loading {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 20px;
-      gap: 20px;
-
-      .pl_spinner {
-        width: 50px;
-        height: 50px;
-        border: 4px solid rgba(89, 178, 70, 0.2);
-        border-top-color: #59b246;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      p {
-        font-size: 16px;
-        color: #666;
-      }
+      padding: 40px 20px;
     }
 
     .pl_list {
@@ -75,11 +51,183 @@
       gap: 0;
     }
   }
+
+  .project_skeleton {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: shimmer 1.5s infinite;
+
+    @keyframes shimmer {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .project_skeleton_browser {
+      height: 20px;
+      background-color: #f3f2f2;
+      display: flex;
+      align-items: center;
+      padding: 0 8px;
+      gap: 6px;
+    }
+
+    .project_skeleton_circle {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #ddd;
+    }
+
+    .project_skeleton_content {
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .project_skeleton_title {
+      height: 24px;
+      width: 70%;
+      background: linear-gradient(
+        90deg,
+        #e0e0e0 25%,
+        #f0f0f0 50%,
+        #e0e0e0 75%
+      );
+      background-size: 200% 100%;
+      border-radius: 4px;
+      animation: loading 1.5s infinite;
+    }
+
+    .project_skeleton_description {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .project_skeleton_line {
+      height: 12px;
+      background: linear-gradient(
+        90deg,
+        #e0e0e0 25%,
+        #f0f0f0 50%,
+        #e0e0e0 75%
+      );
+      background-size: 200% 100%;
+      border-radius: 4px;
+      animation: loading 1.5s infinite;
+
+      &.short {
+        width: 60%;
+      }
+    }
+
+    .project_skeleton_technologies {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .project_skeleton_badge {
+      height: 24px;
+      width: 60px;
+      background: linear-gradient(
+        90deg,
+        #e0e0e0 25%,
+        #f0f0f0 50%,
+        #e0e0e0 75%
+      );
+      background-size: 200% 100%;
+      border-radius: 12px;
+      animation: loading 1.5s infinite;
+    }
+
+    .project_skeleton_actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .project_skeleton_button {
+      height: 36px;
+      width: 100px;
+      background: linear-gradient(
+        90deg,
+        #e0e0e0 25%,
+        #f0f0f0 50%,
+        #e0e0e0 75%
+      );
+      background-size: 200% 100%;
+      border-radius: 18px;
+      animation: loading 1.5s infinite;
+    }
+
+    .project_skeleton_image {
+      height: 200px;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        #e0e0e0 25%,
+        #f0f0f0 50%,
+        #e0e0e0 75%
+      );
+      background-size: 200% 100%;
+      animation: loading 1.5s infinite;
+    }
+
+    @keyframes loading {
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
+    }
+
+    &.dark-mode {
+      border-color: #444;
+      background-color: #2a2a2a;
+
+      .project_skeleton_browser {
+        background-color: #1a1a1a;
+      }
+
+      .project_skeleton_circle {
+        background-color: #444;
+      }
+
+      .project_skeleton_title,
+      .project_skeleton_line,
+      .project_skeleton_badge,
+      .project_skeleton_button,
+      .project_skeleton_image {
+        background: linear-gradient(
+          90deg,
+          #333 25%,
+          #444 50%,
+          #333 75%
+        );
+        background-size: 200% 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 700px) {
   .projectList {
-    padding: 50px 100px;
+    padding: 100px 100px 80px;
 
     .pl_card {
       .pl_texts {

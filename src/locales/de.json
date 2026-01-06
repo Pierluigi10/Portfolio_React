@@ -5,7 +5,9 @@
     "title1": "Full Stack Entwickler",
     "title2": "React Enthusiast",
     "title3": "Problemlöser",
-    "description": "Ich liebe es, Web-Erlebnisse zu schaffen, die sowohl schön als auch leistungsstark sind. React, Next.js und Astro im Frontend. Node.js und NestJS im Backend. Benutzererfahrung ist meine Leidenschaft."
+    "description": "Ich liebe es, Web-Erlebnisse zu schaffen, die sowohl schön als auch leistungsstark sind. React, Next.js und Astro im Frontend. Node.js und NestJS im Backend. Benutzererfahrung ist meine Leidenschaft.",
+    "viewProjects": "Projekte Ansehen",
+    "getInTouch": "Kontakt Aufnehmen"
   },
   "about": {
     "title": "Über Mich",
@@ -13,10 +15,37 @@
     "description": "Ich habe eine einjährige Vollzeitausbildung in moderner Webentwicklung abgeschlossen. In meiner Schublade bewahre ich einen Abschluss in Politikwissenschaft auf.",
     "skills": "HTML5 || CSS || SASS || JavaScript || TypeScript || React.js || Next.js || Astro || Node.js || NestJS || Express"
   },
+  "skills": {
+    "title": "Fähigkeiten & Technologien",
+    "subtitle": "Technologien und Tools, mit denen ich arbeite, um Ideen zum Leben zu erwecken",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools"
+  },
   "projects": {
     "title": "Projekte",
     "loading": "Projekte werden geladen...",
     "error": "Projekte können nicht geladen werden. Zeige zwischengespeicherte Projekte."
+  },
+  "contact": {
+    "title": "Kontakt Aufnehmen",
+    "subtitle": "Schreiben Sie mir gerne, wenn Sie zusammenarbeiten möchten oder einfach Hallo sagen möchten!",
+    "email": "E-Mail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "sendEmail": "E-Mail Senden",
+    "visit": "Besuchen",
+    "copy": "Kopieren",
+    "copyEmail": "E-Mail in Zwischenablage kopieren",
+    "copied": "Kopiert!"
+  },
+  "navbar": {
+    "home": "Startseite",
+    "about": "Über Mich",
+    "skills": "Fähigkeiten",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "menuToggle": "Navigationsmenü umschalten"
   },
   "theme": {
     "lightMode": "Zum hellen Modus wechseln",

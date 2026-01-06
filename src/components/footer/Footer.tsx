@@ -61,7 +61,7 @@ function Footer() {
     <footer className={`footer ${state.darkMode ? "dark-mode" : ""}`}>
       <div className="footer_content">
         <div className="footer_social">
-          {socialLinks.map((link) => (
+          {socialLinks.map((link, index) => (
             <a
               key={link.name}
               href={link.url}
@@ -69,13 +69,16 @@ function Footer() {
               rel="noopener noreferrer"
               className="footer_link"
               aria-label={link.name}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {link.icon}
+              <span className="footer_link_icon">{link.icon}</span>
+              <span className="footer_link_label">{link.name}</span>
             </a>
           ))}
         </div>
         <p className="footer_text">
-          © {new Date().getFullYear()} Pierluigi Baiano. All rights reserved.
+          © {new Date().getFullYear()} Pierluigi Baiano.{" "}
+          <span className="footer_heart">Made with ❤️</span> All rights reserved.
         </p>
       </div>
     </footer>

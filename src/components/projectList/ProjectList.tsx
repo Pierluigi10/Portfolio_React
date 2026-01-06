@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import "./projectList.scss";
 import Project from "../project/Project";
+import ProjectSkeleton from "./ProjectSkeleton";
 import { useGitHubRepos } from "../../hooks/useGitHubRepos";
 
 function ProjectList() {
@@ -8,7 +9,7 @@ function ProjectList() {
   const { projects, loading, error } = useGitHubRepos();
 
   return (
-    <section className="projectList" aria-labelledby="projects-title">
+    <section id="projects" className="projectList" aria-labelledby="projects-title">
       <div className="pl_bg"></div>
       <div className="pl_card">
         <div className="pl_texts">
@@ -23,8 +24,9 @@ function ProjectList() {
         </div>
         {loading ? (
           <div className="pl_loading" aria-live="polite">
-            <div className="pl_spinner"></div>
-            <p>{t("projects.loading")}</p>
+            <div className="pl_list">
+              <ProjectSkeleton count={3} />
+            </div>
           </div>
         ) : (
           <div className="pl_list">

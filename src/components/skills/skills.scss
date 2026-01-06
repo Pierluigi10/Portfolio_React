@@ -1,0 +1,247 @@
+.skills {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 80px;
+  background: linear-gradient(180deg, transparent 0%, rgba(89, 178, 70, 0.05) 100%);
+
+  .skills_container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .skills_title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: inherit;
+  }
+
+  .skills_subtitle {
+    font-size: 18px;
+    color: #4a4a4a; // Better contrast ratio ~7.1:1
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+  }
+
+  .skills_categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 40px;
+  }
+
+  .skills_category {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(89, 178, 70, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(89, 178, 70, 0.15);
+    }
+
+    .skills_category_title {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      color: #4a8a3a; // Better contrast ratio
+    }
+
+    .skills_list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .skill_item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      min-width: 100px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        transform: translateY(-8px) scale(1.05);
+        box-shadow: 0 8px 20px rgba(89, 178, 70, 0.3);
+        background-color: #f8f9fa;
+      }
+
+        .skill_icon {
+          font-size: 40px;
+          color: #4a8a3a; // Better contrast
+        transition: transform 0.3s ease;
+
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      .skill_name {
+        font-size: 14px;
+        font-weight: 600;
+        color: #333;
+        text-align: center;
+      }
+
+      &:hover .skill_icon {
+        transform: scale(1.2) rotate(5deg);
+      }
+    }
+  }
+
+  &.dark-mode {
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(125, 216, 98, 0.05) 100%
+    );
+
+    .skills_subtitle {
+      color: #aaa;
+    }
+
+    .skills_category {
+      background-color: rgba(42, 42, 42, 0.8);
+      border-color: rgba(125, 216, 98, 0.2);
+
+      &:hover {
+        box-shadow: 0 10px 30px rgba(125, 216, 98, 0.2);
+      }
+
+      .skills_category_title {
+        color: #7dd862;
+      }
+
+      .skill_item {
+        background-color: #2a2a2a;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+        &:hover {
+          background-color: #333;
+          box-shadow: 0 8px 20px rgba(125, 216, 98, 0.3);
+        }
+
+        .skill_icon {
+          color: #7dd862;
+        }
+
+        .skill_name {
+          color: #e0e0e0;
+        }
+      }
+    }
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .skills {
+    .skills_categories {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .skills_category {
+      .skills_list {
+        gap: 15px;
+      }
+
+      .skill_item {
+        min-width: 90px;
+        padding: 15px;
+
+        .skill_icon {
+          font-size: 35px;
+
+          svg {
+            width: 35px;
+            height: 35px;
+          }
+        }
+
+        .skill_name {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .skills {
+    padding: 60px 15px 40px;
+
+    .skills_title {
+      font-size: 32px;
+    }
+
+    .skills_subtitle {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    .skills_categories {
+      gap: 30px;
+    }
+
+    .skills_category {
+      padding: 20px;
+
+      .skills_category_title {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      .skills_list {
+        gap: 15px;
+      }
+
+      .skill_item {
+        min-width: 80px;
+        padding: 15px;
+
+        .skill_icon {
+          font-size: 32px;
+
+          svg {
+            width: 32px;
+            height: 32px;
+          }
+        }
+
+        .skill_name {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+

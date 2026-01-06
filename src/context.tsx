@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, ReactNode, Dispatch, useContext } from "react";
+import React, { createContext, useReducer, ReactNode, Dispatch, useContext, useEffect } from "react";
 
 interface ThemeState {
   darkMode: boolean;
@@ -17,12 +17,34 @@ export const ThemeContext = createContext<ThemeContextType | undefined>(
   undefined
 );
 
-const INITIAL_STATE: ThemeState = { darkMode: true };
+// Get initial state from localStorage or system preference
+const getInitialTheme = (): boolean => {
+  if (typeof window === "undefined") return true;
+  
+  const saved = localStorage.getItem("darkMode");
+  if (saved !== null) {
+    return saved === "true";
+  }
+  
+  // Check system preference
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return true;
+  }
+  
+  return true; // Default to dark mode
+};
+
+const INITIAL_STATE: ThemeState = { darkMode: getInitialTheme() };
 
 const themeReducer = (state: ThemeState, action: ThemeAction): ThemeState => {
   switch (action.type) {
     case "TOGGLE":
-      return { darkMode: !state.darkMode };
+      const newDarkMode = !state.darkMode;
+      // Save to localStorage
+      if (typeof window !== "undefined") {
+        localStorage.setItem("darkMode", String(newDarkMode));
+      }
+      return { darkMode: newDarkMode };
     default:
       return state;
   }
@@ -34,6 +56,19 @@ interface ThemeProviderProps {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [state, dispatch] = useReducer(themeReducer, INITIAL_STATE);
+  
+  // Apply theme class to document root for better CSS support
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      if (state.darkMode) {
+        document.documentElement.classList.add("dark-mode");
+        document.documentElement.classList.remove("light-mode");
+      } else {
+        document.documentElement.classList.add("light-mode");
+        document.documentElement.classList.remove("dark-mode");
+      }
+    }
+  }, [state.darkMode]);
 
   return (
     <ThemeContext.Provider value={{ state, dispatch }}>

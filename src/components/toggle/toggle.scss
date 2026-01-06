@@ -1,26 +1,76 @@
 .toggle{
-    width: 50px;
-    height: 25px;
+    width: 56px; // Increased for better touch target
+    height: 32px;
     border-radius: 20px;
-    border: 1px solid #999;
+    border: 2px solid #666; // Better contrast
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-around;
     position: relative;
     flex-shrink: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    user-select: none;
 
     .t_icon{
         width: 15px;
         height: 15px;
+        z-index: 1;
     }
 
     .t_button{
-        width: 25px;
-        height: 25px;
+        width: 28px;
+        height: 28px;
         border-radius: 50%;
-        background-color: #999;
+        background-color: #666; // Better contrast
         position: absolute;
-        cursor: pointer;
+        transition: left 0.3s ease, background-color 0.3s ease;
+        left: 2px;
+        pointer-events: none; // Allow clicks to pass through to parent
     }
+
+    &.light .t_button {
+        left: 26px; // Desktop: 56px - 28px - 2px
+    }
+
+    &.dark .t_button {
+        left: 2px;
+    }
+
+    &:hover {
+      border-color: #4a8a3a;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: 3px solid #005fcc;
+      outline-offset: 3px;
+      border-color: #4a8a3a;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+  .toggle {
+    width: 50px;
+    height: 28px;
+
+    .t_icon {
+      width: 13px;
+      height: 13px;
+    }
+
+    .t_button {
+      width: 24px;
+      height: 24px;
+    }
+
+    &.light .t_button {
+      left: 24px; // Mobile: 50px - 24px - 2px
+    }
+
+    &.dark .t_button {
+      left: 2px;
+    }
+  }
 }

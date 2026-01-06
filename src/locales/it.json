@@ -5,7 +5,9 @@
     "title1": "Full Stack Developer",
     "title2": "Appassionato di React",
     "title3": "Problem Solver",
-    "description": "Amo creare esperienze web che siano sia belle che performanti. React, Next.js e Astro nel frontend. Node.js e NestJS nel backend. L'esperienza utente è la mia passione."
+    "description": "Amo creare esperienze web che siano sia belle che performanti. React, Next.js e Astro nel frontend. Node.js e NestJS nel backend. L'esperienza utente è la mia passione.",
+    "viewProjects": "Vedi Progetti",
+    "getInTouch": "Contattami"
   },
   "about": {
     "title": "Su di Me",
@@ -13,10 +15,37 @@
     "description": "Ho completato una formazione a tempo pieno di un anno nello sviluppo web moderno. Nel mio cassetto custodisco una laurea in Scienze Politiche.",
     "skills": "HTML5 || CSS || SASS || JavaScript || TypeScript || React.js || Next.js || Astro || Node.js || NestJS || Express"
   },
+  "skills": {
+    "title": "Competenze & Tecnologie",
+    "subtitle": "Tecnologie e strumenti con cui lavoro per dare vita alle idee",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Strumenti"
+  },
   "projects": {
     "title": "Progetti",
     "loading": "Caricamento progetti...",
     "error": "Impossibile caricare i progetti. Mostro progetti in cache."
+  },
+  "contact": {
+    "title": "Contattami",
+    "subtitle": "Sentiti libero di scrivermi se vuoi collaborare o semplicemente dire ciao!",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "sendEmail": "Invia Email",
+    "visit": "Visita",
+    "copy": "Copia",
+    "copyEmail": "Copia email negli appunti",
+    "copied": "Copiato!"
+  },
+  "navbar": {
+    "home": "Home",
+    "about": "Chi Sono",
+    "skills": "Competenze",
+    "projects": "Progetti",
+    "contact": "Contatti",
+    "menuToggle": "Apri/chiudi menu di navigazione"
   },
   "theme": {
     "lightMode": "Passa alla modalità chiara",

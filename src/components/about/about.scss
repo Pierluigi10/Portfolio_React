@@ -1,8 +1,9 @@
 .about {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 80px 20px 60px;
 
   .a_left {
     flex: 1;
@@ -54,9 +55,48 @@
   }
 }
 
+@media only screen and (max-width: 699px) {
+  .about {
+    padding: 60px 15px 40px;
+    min-height: auto;
+
+    .a_left {
+      margin-bottom: 30px;
+
+      .a_card {
+        height: 200px;
+        width: 200px;
+      }
+    }
+
+    .a_right {
+      .a_title {
+        font-size: 28px;
+        margin-bottom: 15px;
+      }
+
+      .a_sub {
+        font-size: 18px;
+        margin: 10px 0;
+      }
+
+      .a_description {
+        font-size: 16px;
+        margin: 10px 0;
+      }
+
+      .a_language {
+        font-size: 14px;
+        margin: 15px 0;
+      }
+    }
+  }
+}
+
 @media only screen and (min-width: 700px) {
   .about {
     flex-direction: row;
+    padding: 100px 20px 80px;
 
     .a_left {
       .a_card {
